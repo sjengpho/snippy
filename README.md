@@ -10,13 +10,7 @@ Snippy is a very basic CLI snippet manager that uses [fzf](https://github.com/ju
 
 #### snippy
 
-The CLI depends on [fzf](https://github.com/junegunn/fzf) and expects a file named *data* to be located at *$HOME/.config/snippy*
-
-#### data
-
-The data file contains snippets and is located at *$HOME/.config/snippy/data*.
-If the data file doesn't exist it will be automatically created with example data.
-Each line represents a snippet and should be defined starting with a name and ending with the snippet value itself between square brackets. Example: `Current directory [pwd]`
+The CLI depends on [fzf](https://github.com/junegunn/fzf) and expects a file named [data](#data) to be located at `$HOME/.config/snippy`
 
 ### Installation
 
@@ -38,3 +32,21 @@ fcs() {
   print -z $(snippy)
 }
 ```
+
+## Data
+
+The data file contains snippets and is located at the following path. If the file doesn't exist it will be automatically created with example data.
+
+```text
+$HOME/.config/snippy/data
+```
+
+Example content
+
+```text
+Current directory [pwd]
+List [ls]
+Move or rename files [mv]
+```
+
+Each line represents a snippet and should be defined starting with a name and ending with the snippet value itself between square brackets.
